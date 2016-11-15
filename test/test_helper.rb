@@ -7,4 +7,10 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
+
+  # Give this method a different name than logged_in?
+  # in the SessionsController to prevent confusion
+  def is_logged_in?
+  	!session[:user_id].nil?
+  end
 end
